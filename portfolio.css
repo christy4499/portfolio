@@ -1,0 +1,229 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;/* vh use cheytha nammal use cheyyana devicinte maximum height aayit varum 1vh 2px */
+    background-color: white;
+    position: relative;/* eni enth div place cheythalaum ee div ine relate cheyth div varan */
+}
+
+.navbar{
+    display: flex;/* side by side place aavan */
+    justify-content: space-between;/* 2 childinte edel space kond varan here the childs are img and ul ,eth kodukkumbo parentinte tagil aahn kodukkande */
+    width: 85%;
+    align-items: center;/* ellam centeril varan */
+    margin-left: 100px;
+}
+
+#logo{
+    width: 130px;
+}
+
+.listitem{
+display: inline-block;/* navabarile items horizontal aayit varan */
+
+list-style: none;/* listil olla dots povan */
+
+margin: 10px 20px;/* ethinte gyap clockwise direction aayitaan calculate cheyyane eg:first top then right then bottom then left,but here 2 ennam kodutha athinte artham 1st for top and bottom 2nd for right and left  */
+
+}
+
+.links{
+    text-decoration: none; /* underline maatan */
+
+    color: black;
+    
+    font-weight: bold;/* bold aakan */
+}
+
+/* psuedo class */
+/* tag use cheyth aahnel, tag class aahnel class, id aahnel id  */
+/* syntax : pseudo-class(property:value) */
+
+.links:hover{
+    color: red;
+}
+.title{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.title_h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.lastname{
+    color: grey;
+}
+.download{
+    text-decoration: none;
+    background-color: black;/* buttonte background */
+    color: white;/* letterinte color */
+    font-weight: bold;
+    padding: 10px 20px;/* textine nadukkot aakan */
+    border-radius: 7px;
+    display: inline-block;/* linkinu oru proper height or width indavilla so ath specify cheyyyan aaahn display inline block kodukkunath, ath koduthaale linkinu margin left okke work aaghulu */
+    margin-top: 30px;
+    /* download attribute use cheyyanath a button njekkumbol download aavan after this hrefil link paste aakanam download aavanda sanathinte */
+    /* drive link upload aakit target blank kodutha download nammal download njekkumbol oru preview varum download aavunnathinu mumb */
+}
+.title-img{
+    width: 45%;
+    height: 80%;
+    position: absolute;/* onninte mele onn aayit varan(overlap) */
+    right: 30px;/* rightilek aavan vendii aahn use cheythe,calculation rightil ninn 30px */
+    bottom: 0px;
+}
+.title-img img{
+    position: absolute;/* overlap aayi varan */
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 2s;/* animation add aakan */
+}
+
+.title-img:hover #shape{
+    bottom: 70px;
+}
+.title-img:hover #girl{
+    left: 30%;
+}
+#about{
+    margin: 18% 8% 0px 8%;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{/* decentant h2 aaki koduthath vere h2 aayit same aavand erikyan */
+    font-size: 30px;
+}
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+.about-content{
+    display: grid;/* side by side varan */
+    grid-template-columns: repeat(2, 1fr);/*size edit cheyyan (2,1fr) enn paranja 2 div 1fr'il varan 1fr=255px */
+    gap: 2rem;/* 1rem=16px */
+    margin-top: 2rem;
+}
+.about-img img{
+    width: 80%;
+}
+.about-details{
+    font-size: 19px;
+    font-weight: 400px;
+    text-align: justify;/* contentsinte starting and end ore vertical linil end aavan */
+}
+.information{
+    margin-top: 2rem;
+}
+.info-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.info-box span{/* logo and data thammil gyap varan */
+    margin-left: 10px;
+}
+#skills{
+    margin: 8% 8% 0 8%;
+}
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.skill-img{
+    width: 90%;
+    padding-left: 4rem;
+}
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.base-bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.html-bar{
+    background-color: orange;
+    width: 95%;
+}
+.css-bar{
+    background-color: orange;
+    width: 88%;
+}
+.react-bar{
+    background-color: orange;
+    width: 89%;
+}
+.js-bar{
+    background-color: orange;
+    width: 85%;
+}
+.icon-set{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+.icon, .up-arrow{/* ee up arrow comma itt koduthathinte reason ee same property aahn up arrowyikyum vendath */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+}
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right , yellow, orange);
+}
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s;/* oru name aayitaan shake enn koduthe */
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+.up-arrow{
+    float: right;
+    background-image: linear-gradient(to bottom right , yellow, orange);
+    margin: 0px 20px 50px 0px;
+}
+.up-arrow:hover i{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;/* smooth browsinginu vendi */
+}
